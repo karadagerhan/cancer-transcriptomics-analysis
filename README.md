@@ -36,6 +36,20 @@ COAD, KIRC and PRAD formed relatively distinct clusters, while BRCA and LUAD sho
 
 The methods used to estimate the number of clusters did not completely agree. The silhouette score was highest at seven clusters, while the elbow method and hierarchical clustering suggested different structures. I therefore treated five clusters as a useful comparison with the known labels rather than claiming it was the objectively optimal number of clusters.
 
+## Visualisations
+
+### Cluster structure
+
+The PCA comparison below shows the structure identified by K-means alongside the known cancer types.
+
+![PCA comparison of K-means clusters and cancer types](figures/pca_clusters_vs_cancer_types.png)
+
+### Choosing the number of clusters
+
+The silhouette analysis produced its highest score at seven clusters. This was considered alongside the elbow method and hierarchical clustering before using five clusters for comparison with the five known cancer types.
+
+![Silhouette scores across different numbers of clusters](figures/silhouette_scores.png)
+
 ## Limitations
 
 The dataset is a pre-processed benchmark dataset and the gene identifiers are non-descriptive, so the current analysis cannot identify which genes are driving the separation between cancer types.
@@ -52,6 +66,7 @@ Planned work includes differential expression analysis and pathway-level interpr
 
 - `notebooks/01_pilot_clustering.ipynb` - pilot analysis of the benchmark gene-expression dataset
 - `notebooks/README.md` - overview of the analysis notebooks
+- `figures/` - selected visualisations from the pilot analysis
 
 ## Tools
 
